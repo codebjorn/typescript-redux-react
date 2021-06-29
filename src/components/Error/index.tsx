@@ -12,7 +12,11 @@ const Error: FunctionComponent = (): ReactElement => {
     dispatch(clearErrors());
   };
 
-  return error.msg ? (
+  if (!error.msg) {
+    return <></>;
+  }
+
+  return (
     <Alert
       marginY={10}
       title={`${error.status ? `${error.status}:` : ""} ${error.msg}`}
@@ -20,8 +24,6 @@ const Error: FunctionComponent = (): ReactElement => {
       isRemoveable
       onRemove={clean}
     />
-  ) : (
-    <></>
   );
 };
 
