@@ -2,10 +2,15 @@ import { Pane } from "evergreen-ui";
 import { FunctionComponent, ReactElement } from "react";
 import { useHeadTitle } from "@hooks";
 
-const Page: FunctionComponent<{
+export interface PageProps {
   title: string;
   children: ReactElement | ReactElement[];
-}> = ({ title, children }): ReactElement => {
+}
+
+const Page: FunctionComponent<PageProps> = ({
+  title,
+  children,
+}): ReactElement => {
   useHeadTitle(title);
   return (
     <Pane
