@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "@store";
 import { ErrorState, clearErrors } from "@store/error";
 
-export const Error: FunctionComponent = (): ReactElement => {
+const Error: FunctionComponent = (): ReactElement => {
   const dispatch = useDispatch();
   const error: ErrorState = useSelector((store: RootState) => store.error);
 
@@ -24,3 +24,5 @@ export const Error: FunctionComponent = (): ReactElement => {
     <></>
   );
 };
+
+export default Error;

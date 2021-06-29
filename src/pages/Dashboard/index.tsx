@@ -5,7 +5,7 @@ import { Page } from "@components";
 import { logoutSuccess } from "@store/auth";
 import { getErrors } from "@store/error";
 
-export const Dashboard: FunctionComponent = (): ReactElement => {
+const Dashboard: FunctionComponent = (): ReactElement => {
   const dispatch = useDispatch();
 
   const logoutUser: MouseEventHandler = (): void => {
@@ -31,3 +31,5 @@ export const Dashboard: FunctionComponent = (): ReactElement => {
     </Page>
   );
 };
+
+export default Dashboard;

@@ -1,7 +1,7 @@
 import { FunctionComponent, ReactElement } from "react";
 import { Link } from "react-router-dom";
 
-export const Goto: FunctionComponent<{
+const Goto: FunctionComponent<{
   url: string;
   children: ReactElement | ReactElement[] | string;
 }> = ({ url, children }): ReactElement => {
@@ -11,3 +11,5 @@ export const Goto: FunctionComponent<{
     </Link>
   );
 };
+
+export default Goto;

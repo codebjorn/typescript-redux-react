@@ -1,5 +1,7 @@
 import { RouteHistory } from "@routes";
 
-export const redirect = (path: string, history: RouteHistory): void => {
+const redirect = (path: string, history: RouteHistory): void => {
   history.push(path);
 };
+
+export default redirect;

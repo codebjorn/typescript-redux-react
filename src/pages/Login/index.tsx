@@ -16,7 +16,7 @@ export interface LoginData {
   password: string;
 }
 
-export const Login: FunctionComponent = (): ReactElement => {
+const Login: FunctionComponent = (): ReactElement => {
   const [data, setData] = useState({} as LoginData);
   const { isLoading, isAuthenticated } = useSelector(
     (state: RootState) => state.auth
@@ -66,3 +66,5 @@ export const Login: FunctionComponent = (): ReactElement => {
     </Page>
   );
 };
+
+export default Login;

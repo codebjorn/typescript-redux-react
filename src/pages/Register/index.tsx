@@ -1,4 +1,9 @@
-import { MouseEventHandler, ReactElement, FunctionComponent, useState } from "react";
+import {
+  MouseEventHandler,
+  ReactElement,
+  FunctionComponent,
+  useState,
+} from "react";
 import { Pane } from "evergreen-ui";
 import { Page, UserForm, Error } from "@components";
 import { useSelector, useDispatch } from "react-redux";
@@ -11,7 +16,7 @@ export interface RegisterData {
   password: string;
 }
 
-export const Register: FunctionComponent = (): ReactElement => {
+const Register: FunctionComponent = (): ReactElement => {
   const [data, setData] = useState({} as RegisterData);
   const { isLoading, isAuthenticated } = useSelector(
     (state: RootState) => state.auth
@@ -58,3 +63,5 @@ export const Register: FunctionComponent = (): ReactElement => {
     </Page>
   );
 };
+
+export default Register;

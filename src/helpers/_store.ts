@@ -10,7 +10,7 @@ import {
 } from "@store/auth";
 import { getErrors } from "@store/error";
 import axios, { AxiosResponse } from "axios";
-import {endpoints} from "./_endpoints";
+import endpoints from "./_endpoints";
 
 export const storeLoginUser = (
   data: LoginData,

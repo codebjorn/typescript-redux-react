@@ -2,7 +2,7 @@ import { Pane } from "evergreen-ui";
 import { FunctionComponent, ReactElement } from "react";
 import { useHeadTitle } from "@hooks";
 
-export const Page: FunctionComponent<{
+const Page: FunctionComponent<{
   title: string;
   children: ReactElement | ReactElement[];
 }> = ({ title, children }): ReactElement => {
@@ -20,3 +20,5 @@ export const Page: FunctionComponent<{
     </Pane>
   );
 };
+
+export default Page;
