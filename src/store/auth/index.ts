@@ -1,6 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit";
 import authActions from "./authActions";
 
+export const TOKEN_NAME = "token";
+
 export interface AuthState {
   token: string | null;
   isAuthenticated: number | boolean | null;

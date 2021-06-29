@@ -1,13 +1,8 @@
-import {
-  Button,
-  Heading,
-  Pane,
-  Strong
-  } from 'evergreen-ui';
-import { FunctionComponent, ReactElement } from 'react';
-import { Goto, Page } from '@components';
+import { Button, Heading, Pane, Strong } from "evergreen-ui";
+import { FunctionComponent, ReactElement } from "react";
+import { Goto, Page } from "@components";
 
-export const Homepage: FunctionComponent = (): ReactElement => {
+const Homepage: FunctionComponent = (): ReactElement => {
   return (
     <Page title="Home">
       <Pane textAlign="center" marginBottom="20px">
@@ -29,3 +24,5 @@ export const Homepage: FunctionComponent = (): ReactElement => {
     </Page>
   );
 };
+
+export default Homepage;

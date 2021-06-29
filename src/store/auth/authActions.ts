@@ -1,11 +1,11 @@
 import { PayloadAction } from "@reduxjs/toolkit";
-import { AuthState } from ".";
+import { AuthState, TOKEN_NAME } from ".";
 
 const authSuccess = (
   state: AuthState,
   action: PayloadAction<{ [key: string]: any }>
 ) => {
-  localStorage.setItem("token", action.payload.token);
+  localStorage.setItem(TOKEN_NAME, action.payload.token);
 
   state.token = action.payload.token;
   state.user = action.payload.user;
@@ -14,7 +14,7 @@ const authSuccess = (
 };
 
 const authClean = (state: AuthState) => {
-  localStorage.removeItem("token");
+  localStorage.removeItem(TOKEN_NAME);
 
   state.token = null;
   state.isAuthenticated = null;

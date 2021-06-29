@@ -5,14 +5,12 @@ import errorActions from "./errorActions";
 export interface ErrorState {
   msg: string | null;
   status: number | null;
-  id: string | null;
   intent: IntentTypes
 }
 
 const initialState: ErrorState = {
   msg: null,
   status: null,
-  id: null,
   intent: "warning",
 };
 

@@ -15,7 +15,7 @@ export interface UserFormProps {
   submitText: string;
 }
 
-export const UserForm: FunctionComponent<UserFormProps> = ({
+const UserForm: FunctionComponent<UserFormProps> = ({
   onUpdate,
   onSubmit,
   isLoading,
@@ -57,3 +57,5 @@ export const UserForm: FunctionComponent<UserFormProps> = ({
     </Pane>
   );
 };
+
+export default UserForm;
