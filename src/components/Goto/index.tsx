@@ -1,9 +1,10 @@
+import { ReactNode } from "react";
 import { FunctionComponent, ReactElement } from "react";
 import { Link } from "react-router-dom";
 
 export interface GotoProps {
   url: string;
-  children: ReactElement | ReactElement[] | string;
+  children: ReactNode;
 }
 
 const Goto: FunctionComponent<GotoProps> = ({
