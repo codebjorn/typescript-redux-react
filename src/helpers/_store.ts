@@ -10,16 +10,15 @@ import {
 } from "@store/auth";
 import { getErrors } from "@store/error";
 import axios, { AxiosResponse } from "axios";
+import {endpoints} from "./_endpoints";
 
 export const storeLoginUser = (
   data: LoginData,
   dispatch: AppDispatch
 ): void => {
-  const endpoint = `${process.env.REACT_APP_API_URI}/api/login`;
-
   dispatch(userLoading());
   axios
-    .post(endpoint, data)
+    .post(endpoints.login, data)
     .then((response: AxiosResponse) => {
       const responseData = response.data;
       responseData.user = {
@@ -41,11 +40,9 @@ export const storeRegisterUser = (
   data: RegisterData,
   dispatch: AppDispatch
 ): void => {
-  const endpoint = `${process.env.REACT_APP_API_URI}/api/register`;
-
   dispatch(userLoading());
   axios
-    .post(endpoint, data)
+    .post(endpoints.register, data)
     .then((response: AxiosResponse) => {
       let responseData = response.data;
       responseData.user = {
