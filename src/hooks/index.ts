@@ -2,8 +2,7 @@ import { useEffect } from "react";
 import { useTheme as useBaseTheme } from "evergreen-ui";
 import { Theme } from "@theme";
 import { useDispatch } from "react-redux";
-import { getAuthToken } from "@helpers";
-import { userLoaded } from "@store/auth";
+import { TOKEN_NAME, userLoaded } from "@store/auth";
 
 /* Head Hooks */
 
@@ -18,8 +17,12 @@ export const useTheme = (): Theme => useBaseTheme();
 
 /* Request Hooks */
 
+export const useAuthToken = () => {
+  return localStorage.getItem(TOKEN_NAME);
+};
+
 export const useTokenCheck = (): void => {
-  const token = getAuthToken();
+  const token = useAuthToken();
   const dispatch = useDispatch();
 
   if (token) {
