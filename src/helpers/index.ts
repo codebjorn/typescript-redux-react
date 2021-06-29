@@ -23,7 +23,7 @@ export const storeLoginUser = (
   axios
     .post(endpoint, data)
     .then((response: AxiosResponse) => {
-      let responseData = response.data;
+      const responseData = response.data;
       responseData.user = {
         email: data.email,
       };
