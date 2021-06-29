@@ -11,6 +11,7 @@ import {
   registerFail,
 } from "@store/auth";
 import { getErrors } from "@store/error";
+import { TOKEN_NAME } from "@store/auth";
 
 export const storeLoginUser = (
   data: LoginData,
@@ -68,8 +69,4 @@ export const storeRegisterUser = (
 
 export const redirect = (path: string, history: RouteHistory): void => {
   history.push(path);
-};
-
-export const getAuthToken = () => {
-  return localStorage.getItem("token");
 };
