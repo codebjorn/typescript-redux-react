@@ -11,7 +11,6 @@ import {
   registerFail,
 } from "@store/auth";
 import { getErrors } from "@store/error";
-import { TOKEN_NAME } from "@store/auth";
 
 export const storeLoginUser = (
   data: LoginData,
@@ -30,13 +29,12 @@ export const storeLoginUser = (
       dispatch(loginSuccess(responseData));
     })
     .catch((error: any) => {
-      const id = "loginErorr";
       const msg = error.response.data.error as string;
       const status = error.response.status as number;
       const intent = "danger";
 
       dispatch(loginFail());
-      dispatch(getErrors({ msg, status, id, intent }));
+      dispatch(getErrors({ msg, status, intent }));
     });
 };
 
@@ -57,13 +55,12 @@ export const storeRegisterUser = (
       dispatch(registerSuccess(responseData));
     })
     .catch((error: any) => {
-      const id = "registerErorr";
       const msg = error.response.data.error as string;
       const status = error.response.status as number;
       const intent = "danger";
 
       dispatch(registerFail());
-      dispatch(getErrors({ msg, status, id, intent }));
+      dispatch(getErrors({ msg, status, intent }));
     });
 };
 
