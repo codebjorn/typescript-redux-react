@@ -1,5 +1,5 @@
-import { Alert } from "evergreen-ui";
 import { FunctionComponent, ReactElement } from "react";
+import { Alert } from "evergreen-ui";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "@store";
 import { ErrorState, clearErrors } from "@store/error";
